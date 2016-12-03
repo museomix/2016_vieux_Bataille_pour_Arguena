@@ -1,0 +1,109 @@
+/* CSS declarations go here */
+
+body:before {
+  content: "";
+  position: fixed;
+  top: -160%;
+  right: -160%;
+  z-index: -1;
+  
+  display: block;
+  background-image: url('3 copy.png');
+  width: 600%;
+  height: 600%;
+  
+/*  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);*/
+
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1000s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+  -moz-animation-name: rotate;
+  -moz-animation-duration: 1000s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-timing-function:linear;
+}
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform:rotate(0deg);}
+  to {  -webkit-transform:rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+  from {-moz-transform:rotate(0deg);}
+  to {  -moz-transform:rotate(360deg);}
+}
+
+body {
+/*  position: fixed;*/
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  /*margin-left: 20px;*/
+  /*margin-right: 20px;*/
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+/*  font-family: 'Yatra One', cursive;
+  font-family: 'Roboto', sans-serif;*/
+  font-family: 'Oswald', sans-serif;
+/*  font-family: 'Lobster', cursive;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;*/
+  /*font-variant: small-caps;*/
+  letter-spacing: 5px;
+}
+
+#__blaze-root {
+  width: 100%;
+}
+
+#left {
+  /*position: absolute;*/
+  top: 0px;
+  display: inline-block;
+  width: 66%;
+}
+
+#left #video {
+  height: 50vh;
+  margin-top: 6vh;
+}
+
+#left #text {
+  height: 25vh;
+  overflow: hidden;
+}
+
+#right {
+  display: inline-block;
+  width: 10%;
+  top: 0px;
+}
+
+#plan-forum {
+  position: absolute;
+  top: 12%;
+  /*width: 30vw;*/
+  height: 40vw;
+}
+
+#plan-img {
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+#text-text, #text-title {
+  margin: 0;
+}
+
+#video-text {
+  padding-top: 10px;
+}

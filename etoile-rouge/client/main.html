@@ -1,0 +1,73 @@
+<head>
+  <title>etoile-rouge</title>
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat|Oswald|Raleway|Roboto|Yatra+One" rel="stylesheet">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, minimal-ui, maximum-scale=1, minimum-scale=1">
+  <meta name="apple-mobile-web-app-title" content="Passages">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/icon.png">
+</head>
+
+<template name="layout">
+  {{> Template.dynamic template=main}}
+</template>
+
+<template name="main">
+  <h3 style="display:none">{{count}}</h3>
+  <div id="main">
+    <div id="left">
+      <div id="video">
+        {{#if $eq state.stateKey "home"}}
+          <h2 id="video-text">{{state.videoText}}</h2>
+          <img style="width: 200px;" src={{state.videoUrl}}>
+        {{else}}
+          {{#if ($and state.videoPlaying ($not state.comesFromFuture))}}
+            {{> videoPlayer videoUrl=state.videoUrl atEndOfVideo=showText stateId=state.stateId}}
+          {{else}}
+            <h2 id="video-text">{{state.videoText}}</h2>
+          {{/if}}
+        {{/if}}
+      </div>
+
+      <div id="text">
+        <p id="text-title">{{state.textTitle}}</p>
+        <br/>
+        <p id="text-text">{{state.textText}}</p>
+      </div>
+    </div>
+
+    <div id="right">
+      <div id="plan-forum">
+        <img id="plan-img" src={{state.planUrl}}>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="videoPlayer">
+  <div id="video-player">
+  <video id="state-video-{{props.stateId}}" class="video-js vjs-default-skin"
+      controls preload="auto" width="550" height="300">
+     <source src={{props.videoUrl}} type="video/mp4" />
+     <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+  </div>
+</template>
+
+
+<template name="controls">
+  <a class="js-reset">Recommencer du début</a>
+  <a class="js-remove">Enlever un coup</a>
+  <br/>
+  Jouer prochain coup:
+  <br/>
+  {{#each objet in coupsRestants}}
+    <span class="js-add-object">{{objet}}</span>
+  {{/each}}
+  <br/>
+  Coups precedents:
+  <br/>
+  {{#each coup in state.coups}}
+    <p>{{coup}}</p>
+    <br/>
+  {{/each}}
+</template>

@@ -1,0 +1,36 @@
+Yo margot
+
+
+1) lancer l application:
+
+Ouvrir le Terminal (en bas a droite de tes apps, icône noir avec un "plus grand que")
+
+Copie-colle puis appuie sur entrée pour les lignes suivantes:
+
+cd /Users/margotfrenea/Documents/Museomix/etoile-rouge (2 fois en haut puis enter)
+meteor run (2 fois en haut puis enter)
+
+(ça ça prends pas mal de temps)
+
+
+Làpp est lancee !
+
+2) Ouvrir lecran des joueurs. 
+
+ouvrir un navigateur web: (chrome), et aller sur http://localhost:3000
+
+Le mettre sur le videoprojecteur; retourner le sens (se mettre en ecrans sépares)
+
+3) Ouvrir lecran de controle
+
+sur lecran de lordi, ouvrir une autre fenetre de navigateur et aller sur http://localhost:3000/controls
+
+4) ENJOY ! Le maitre du jeu doit d abord reset, puis na plus qua rentrer les différentes actions des joueurs en cliquant sur les bons mots.
+
+Le chemin gagnqnt est curie -> curie-plus -> atelier -> boucherie
+
+Desole pour lòrthographe mqis je suis sur QWERTY cèst chqud!!
+
+Hesite pas si tas des questions appelle moi 06 21 37 12 89  ce sera le plus rapide
+
+Best, Merci c etait dlq folie belle orga a +++ :)
